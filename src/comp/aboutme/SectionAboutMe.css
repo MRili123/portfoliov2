@@ -1,0 +1,152 @@
+.profile:hover {
+    box-shadow: 0 0 20px 10px rgba(128, 0, 128, 0.7); /* Purple glow effect */
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+.info_degree {
+    display: flex; /* Makes it a row */
+    justify-content: space-around; /* Evenly spaces out DUT and BS */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between DUT and BS */
+    padding: 20px; /* Optional padding */
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+}
+
+/* Individual columns (DUT and BS) */
+.DUT, .BS {
+    display: flex; /* Makes the content inside vertical */
+    flex-direction: column; /* Stacks span, h2, and p vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Centers text */
+    flex: 1; /* Makes columns equal width */
+    min-width: 120px; 
+    background-color: #eceef3;
+    max-height: 200px;
+    border-radius: 30px;
+    height: 15vh;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ensures a minimum width for smaller screens */
+}
+
+.text-animation {
+    position: relative;
+    display: inline-block;
+}
+
+.profile {
+    padding-left: 0; /* Removed to ensure proper centering */
+    border-radius: 50%; /* Makes the shape circular */
+    height: 600px; /* Both height and width must be the same */
+    width: 600px; /* Match the height */
+    object-fit: cover; /* Prevents stretching or distortion */
+    display: block; /* Optional: Removes inline spacing */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.8s ease, transform 0.8s ease; 
+}
+
+.info {
+    flex: 2; 
+    width: 500px;
+    text-align: center;
+}
+
+.info h1 {
+    font-size: 60px;
+    margin-top: -300px;
+}
+
+.about_me {
+    display: flex; /* Makes it a row */
+    flex-grow: 1; /* Allows it to take available space */
+    width: 100%;
+    align-items: center; /* Align items vertically centered */
+    justify-content: space-between; /* Space evenly between the child elements */
+    padding: 20px;
+    margin-top: 400px;
+    border-radius: 10px;
+}
+
+.profile-container {
+    flex: 1; /* Allows resizing */
+    display: flex;
+    justify-content: left;
+    margin-top: -200px; /* Centers the image inside the container */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .profile {
+        height: 500px;
+        width: 500px;
+    }
+
+    .info h1 {
+        font-size: 50px;
+        margin-top: -250px;
+    }
+}
+
+@media (max-width: 992px) {
+    .profile {
+        height: 400px;
+        width: 400px;
+    }
+
+    .info h1 {
+        font-size: 40px;
+        margin-top: -200px;
+    }
+
+    .about_me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile {
+        height: 300px;
+        width: 300px;
+    }
+
+    .info h1 {
+        font-size: 30px;
+        margin-top: -150px;
+    }
+
+    .info_degree {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .DUT, .BS {
+        width: 100%;
+        max-height: none;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile {
+        height: 200px;
+        width: 200px;
+    }
+
+    .info h1 {
+        font-size: 20px;
+        margin-top: -100px;
+    }
+
+    .about_me {
+        padding: 10px;
+        margin-top: 200px;
+    }
+
+    .profile-container {
+        margin-top: -100px;
+    }
+}

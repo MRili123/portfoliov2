@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-color: rgb(255, 255, 255);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.925rem;
+  margin-top: 60px; 
+display: flex;
+flex-direction: column;
+align-items: center; 
+
+
+ 
+
+
+  
+
+}
