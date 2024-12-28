@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 
-const SectionAboutMe = () => {
+const SectionAboutMe = ({sendLang}) => {
   const [menuActive, setMenuActive] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState({
     label: "English",
@@ -22,6 +22,12 @@ const SectionAboutMe = () => {
     setSelectedLanguage(lang);
   };
 
+  const handleChange = () => {
+    sendLang(selectedLanguage.value); // Sends the input value to the parent
+  };
+  useEffect(() => {
+    sendLang(selectedLanguage.value); // Send the selected language to the parent
+  }, [selectedLanguage, sendLang]);
   return (
     <nav className="navbar">
       <div className="container">

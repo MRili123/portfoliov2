@@ -84,9 +84,10 @@
   align-items: center;
   cursor: pointer;
   gap: 8px;
-  width: 120px;
+  width: 100%;
+  max-width: 120px;
   background-color: #f5f5f5;
-  padding: 15px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 10px;
 }
@@ -143,15 +144,21 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar {
+    margin-top: -170px;
     position: fixed;
-     margin-top: -170px;
+ 
     flex-wrap: wrap;
     padding: 10px 15px;
+    width: 100%;
+  }
+
+  .selected-language {
+    margin-left: 60px;
   }
 
   .navbar-header {
     display: block;
-    margin-right: 60px;
+    margin-right: 0;
   }
 
   .navbar-toggler {
@@ -181,7 +188,6 @@
     padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 999;
-    margin-right: 45px;
   }
 
   .navbar-menu.active {
@@ -203,10 +209,6 @@
     background-color: rgb(255, 255, 255);
     color: #524b4b;
     transition: background-color 0.3s, color 0.3s;
-  }
-
-  .navbar {
-    width: 400px;
   }
 
   .menu-close {

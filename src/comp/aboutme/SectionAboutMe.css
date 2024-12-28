@@ -14,6 +14,7 @@
 
 /* Individual columns (DUT and BS) */
 .DUT, .BS {
+
     display: flex; /* Makes the content inside vertical */
     flex-direction: column; /* Stacks span, h2, and p vertically */
     align-items: center; /* Centers content horizontally */
@@ -21,12 +22,33 @@
     flex: 1; /* Makes columns equal width */
     min-width: 120px; 
     background-color: #eceef3;
-    max-height: 200px;
+    max-height: 140px;
     border-radius: 30px;
     height: 15vh;
-    font-size: 20px;
+    font-size: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ensures a minimum width for smaller screens */
 }
+.dowload button {
+    padding: 10px 20px; /* Adjust size */
+    font-size: 1rem; /* Text size */
+    font-weight: bold; /* Bold text */
+    color: white; /* Text color */
+    background-color: #aba6a6; /* Green background */
+    border: none;
+    font-size: 20px;
+    margin-top: 20px; /* Remove border */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background-image: linear-gradient(131deg,  #493cff, #ff3ce8);
+  
+  }
+  .dowload button:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em #f15cffba;
+    background-size: 100% 100%;
+    transform: translateY(-0.15em);
+  }
 
 .text-animation {
     position: relative;
@@ -36,8 +58,8 @@
 .profile {
     padding-left: 0; /* Removed to ensure proper centering */
     border-radius: 50%; /* Makes the shape circular */
-    height: 600px; /* Both height and width must be the same */
-    width: 600px; /* Match the height */
+    height: 400px; /* Both height and width must be the same */
+    width: 400px; /* Match the height */
     object-fit: cover; /* Prevents stretching or distortion */
     display: block; /* Optional: Removes inline spacing */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -54,6 +76,19 @@
     font-size: 60px;
     margin-top: -300px;
 }
+.down {
+    height: 40px;
+    margin-top: 120px;
+    margin-left: 100px; 
+    margin-right: auto; 
+    display: block; 
+    cursor: pointer; 
+    transition: transform 0.3s ease; 
+  }
+  
+  .down:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+  }
 
 .about_me {
     display: flex; /* Makes it a row */
@@ -62,8 +97,14 @@
     align-items: center; /* Align items vertically centered */
     justify-content: space-between; /* Space evenly between the child elements */
     padding: 20px;
-    margin-top: 400px;
+    margin-top: 200px;
     border-radius: 10px;
+}
+.info_text {
+  margin-top: 50px;
+  font-size: 25px;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .profile-container {
@@ -84,6 +125,9 @@
         font-size: 50px;
         margin-top: -250px;
     }
+    .down {
+        display: none ;
+      }
 }
 
 @media (max-width: 992px) {
@@ -96,6 +140,9 @@
         font-size: 40px;
         margin-top: -200px;
     }
+    .down {
+        display: none ;
+      }
 
     .about_me {
         flex-direction: column;
@@ -107,18 +154,23 @@
     }
 }
 
+
 @media (max-width: 768px) {
     .profile {
         height: 300px;
         width: 300px;
     }
+    .down {
+        display: none ;
+      }
 
     .info h1 {
-        font-size: 30px;
-        margin-top: -150px;
+        font-size: 40px;
+        margin-top: -450px;
     }
 
     .info_degree {
+        margin-top: 400px;
         flex-direction: column;
         align-items: center;
     }
@@ -128,17 +180,34 @@
         max-height: none;
         height: auto;
     }
+
+    .about_me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .profile-container {
+        margin-top: 0;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 576px) {
     .profile {
-        height: 200px;
-        width: 200px;
+        height: 250px;
+        width: 250px;
     }
+    .down {
+        display: none ;
+      }
 
     .info h1 {
-        font-size: 20px;
-        margin-top: -100px;
+    
+        margin-top: -350px;
     }
 
     .about_me {
@@ -147,6 +216,6 @@
     }
 
     .profile-container {
-        margin-top: -100px;
+        margin-top: -50px;
     }
 }

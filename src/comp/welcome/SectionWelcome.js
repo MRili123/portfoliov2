@@ -140,7 +140,7 @@ const SectionWelcome = () => {
       <div ref={containerRef} id="model-container" style={{ width: '100%', height: '100vh' }} />
       <div className="welcome">
         <h1>Hi, It's <span>Ilias</span></h1>
-        <span>I am a</span>
+        <span>I am a <br></br></span>
         <h3 className="text-animation">
           <span className="dynamic-text animate" id='text-animate'>{text}</span>
         </h3>
